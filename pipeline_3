@@ -9,16 +9,16 @@ pipeline {
     stage('para') {
       steps {
         echo 'para...'
-        
-           parallel stages('apple'){
-           echo 'apple...'
-           }
-           parallel stages('banana'){
-           echo 'banana...'
-           }
-           parallel stages('peach'){
-           echo 'peach...'
-           }
+           parallel stage {
+            stage('apple'){
+            echo 'apple...'
+            }
+            stage('banana'){
+            echo 'banana...'
+            }
+            stage('peach'){
+            echo 'peach...'
+            }
         }
     }
     stage('after') {
