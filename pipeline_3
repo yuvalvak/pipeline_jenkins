@@ -7,23 +7,23 @@ pipeline {
         }
     }
     stage('para') {
-      parallel {
-        stage('apple'){
-         steps{
-          echo 'apple'
-          }
-        }
-        stage('banana'){
-           steps{
-          echo 'banana'
-          }
-        }
-          stage('peach'){
-         steps{
-          echo 'peach'
-          }
-        }
-
+        parallel {
+            stage('apple') {
+              steps {
+                  echo 'apple'
+              }
+            }
+            stage('banana') {
+              steps{
+                echo 'banana'
+              }
+            }
+            stage('peach') {
+              steps{
+                echo 'peach'
+              }
+            }
+       }
     }
     stage('after') {
       steps {
