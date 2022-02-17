@@ -9,13 +9,19 @@ pipeline {
     stage('para') {
       parallel {
         stage('apple'){
+         steps{
           echo 'apple'
+          }
         }
         stage('banana'){
+           steps{
           echo 'banana'
+          }
         }
           stage('peach'){
-        echo 'peach'
+         steps{
+          echo 'peach'
+          }
         }
 
     }
